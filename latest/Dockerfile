@@ -1,4 +1,4 @@
-FROM jeremycurny/php:7.2-cli-alpine
+FROM php:7.2-cli-alpine
 
 MAINTAINER "Jeremy CURNY" <jeremy.curny.pro@gmail.com>
 
@@ -16,7 +16,11 @@ RUN apk update \
 RUN rm -rf /var/www/html/*
 
 RUN \
-    composer create-project composer/satis:dev-master --no-dev --no-progress /root/satis
+    curl -sL -o /usr/local/bin/composer https://getcomposer.org/download/1.10.1/composer.phar \
+    && chmod +x /usr/local/bin/composer
+
+RUN \
+    composer create-project composer/satis:1.0.0 --no-dev --no-progress /root/satis
 
 EXPOSE 22
 EXPOSE 80
