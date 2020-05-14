@@ -1,4 +1,4 @@
-FROM jeremycurny/php:7.1-cli-alpine
+FROM jeremycurny/php:7.2-cli-alpine
 
 MAINTAINER "Jeremy CURNY" <jeremy.curny.pro@gmail.com>
 
