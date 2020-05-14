@@ -9,7 +9,7 @@ ENV SATIS_RUN_NGINX=1
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apk update \
-    && apk add --no-cache nginx \
+    && apk add --no-cache bash nginx rsync tree \
     && rm -rf /var/cache/apk/* \
     && mkdir -p /run/nginx
 
