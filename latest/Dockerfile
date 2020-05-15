@@ -10,6 +10,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apk update \
     && apk add --no-cache bash git nginx rsync tree \
+    && apk add --no-cache zlib-dev \
     && rm -rf /var/cache/apk/* \
     && mkdir -p /run/nginx
 
