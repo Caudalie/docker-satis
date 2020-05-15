@@ -16,6 +16,9 @@ RUN apk update \
 RUN rm -rf /var/www/html/*
 
 RUN \
+  docker-php-ext-install zip
+
+RUN \
     curl -sL -o /usr/local/bin/composer https://getcomposer.org/download/1.10.1/composer.phar \
     && chmod +x /usr/local/bin/composer
 
