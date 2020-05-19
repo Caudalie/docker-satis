@@ -24,7 +24,7 @@ RUN \
     && chmod +x /usr/local/bin/composer
 
 RUN \
-    composer create-project composer/satis:1.0.0 --no-dev --no-progress /root/satis
+    composer create-project composer/satis:1.x-dev --no-dev --no-progress /root/satis
 
 EXPOSE 22
 EXPOSE 80
